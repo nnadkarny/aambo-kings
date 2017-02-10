@@ -1,5 +1,6 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+// @import url('https://fonts.googleapis.com/css?family=Aclonica');
 
 .booyah-box {
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -28,3 +29,9 @@ body {
   box-shadow: 0px 3px 5px #2B2B2B;
 }
 
+.navbar-inverse .navbar-brand {
+  color: #FFCC00;
+  // font-family: 'Aclonica', sans-serif;
+  font-family: 'megalopolis_extraregular';
+  font-size: 26px;
+}
