@@ -1,4 +1,6 @@
-<!-- <h1><%= @places.inspect %></h1> -->
+<div class="pagination">
+  <%= paginate @places %>
+</div>
 
 <% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">
@@ -6,6 +8,8 @@
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
   </div>
-
-  <!-- <hr /> -->
 <% end %>
+
+<div class="pagination">
+  <%= paginate @places %>
+</div>

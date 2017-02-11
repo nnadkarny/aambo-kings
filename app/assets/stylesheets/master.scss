@@ -35,3 +35,22 @@ body {
   // font-family: 'megalopolis_extraregular';
   font-size: 26px;
 }
+
+.pagination {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  a {
+    color: black
+  }
+  span.current {
+    color: #00B500;
+  }
+  .first, .prev, .page, .next, .last {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+}
+
