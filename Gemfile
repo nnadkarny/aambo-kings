@@ -57,3 +57,6 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 
 # include Kaminari
 gem 'kaminari'
+
+# include SimpleForm
+gem 'simple_form'
