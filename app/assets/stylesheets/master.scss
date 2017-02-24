@@ -72,3 +72,9 @@ body {
   border-radius: 3px;
   padding: 2px 8px 2px 8px;
 }
+
+#map {
+  /* Always set the map height explicitly to define the size of the div
+   * element that contains the map. */
+  height: 300px;
+}
