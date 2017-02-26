@@ -72,3 +72,6 @@ gem 'geocoder'
 
 # include Figaro (for environment variables)
 gem 'figaro'
+
+# include CarrierWave (for file uploads)
+gem 'carrierwave', '~> 1.0'
