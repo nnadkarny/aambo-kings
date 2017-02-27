@@ -70,8 +70,11 @@ gem 'devise'
 # include Geocoder
 gem 'geocoder'
 
-# include Figaro (for environment variables)
+# include Figaro (for environment variables and hiding stuff)
 gem 'figaro'
 
 # include CarrierWave (for file uploads)
 gem 'carrierwave', '~> 1.0'
+
+# include Fog (for communicating with AWS)
+gem "fog"
