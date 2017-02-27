@@ -7,14 +7,24 @@
   <div class="clear"></div>
 
   <% if @place.photos.present? %>
-    <div class="row">
-      <div class="col-12">
-        <% @place.photos.each do |photo| %>
-          <%= image_tag photo.picture, height: "200" %>
-          <small><%= photo.caption %></small>
-        <% end %>
+<!--     <div class="container">
+      <div class="row">
+        <div class="col-12"> -->
+          <% @place.photos.each do |photo| %>
+            <figure class="figure">
+              <img src="<%= photo.picture %>" class="figure-img" />
+              <%#= image_tag photo.picture, height: "200" %>
+              <% if photo.caption.present? %>
+                <figcaption class="figure-caption"><%= photo.caption %></figcaption>
+              <% else %>
+                <figcaption class="figure-caption">&bull;&bull;&bull;</figcaption>
+                <!-- <small><%= photo.caption %></small> -->
+              <% end %>
+            </figure>
+          <% end %>
+<!--         </div>
       </div>
-    </div>
+    </div> -->
   <% end %>
 
   <br />
@@ -100,8 +110,8 @@
       </div>
       <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
         <div class="modal-body">
-            <%= f.input :picture %>
-            <%= f.input :caption %>
+          <%= f.input :picture %>
+          <%= f.input :caption %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
