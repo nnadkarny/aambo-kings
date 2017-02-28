@@ -10,19 +10,18 @@
     <br />
     <p><%= place.description %></p>
 
-    <% if place.photos.present? %>
+  <% if place.photos.present? %>
+    <div class="row">
       <% place.photos.each do |photo| %>
-        <figure class="figure">
-          <img src="<%= photo.picture %>" class="figure-img" />
+        <div class="col-sm-4">
+          <img src="<%= photo.picture %>" class="img-fluid" />
           <% if photo.caption.present? %>
             <figcaption class="figure-caption"><%= photo.caption %></figcaption>
-          <% else %>
-            <figcaption class="figure-caption">&bull;&bull;&bull;</figcaption>
           <% end %>
-        </figure>
+        </div>
       <% end %>
-      <br />
-    <% end %>
+    </div>
+  <% end %>
 
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
