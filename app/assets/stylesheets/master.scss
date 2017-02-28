@@ -129,16 +129,18 @@ input {
 //   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
 // }
 
-.carousel-box {
-  width: 95%;
-  margin: auto;
-  // box-shadow: 0px 3px 5px #2B2B2B;
-  box-shadow: 0px 3px 8px #2a2a2a;
-}
+// .carousel-box {
+//   width: 95%;
+//   margin: auto;
+//   box-shadow: 0px 3px 5px #2B2B2B;
+// }
 
 .carousel {
   // background-color: #4A4A4A;
+  // width: 95%;
   background: image_url('tweed_@2X.png');
+  box-shadow: 0px 3px 8px #2a2a2a;
+  margin: auto;
 }
 
 .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
@@ -147,16 +149,17 @@ input {
   margin: auto;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  color: #00B500;
-}
-
 .carousel-caption {
   font-size: 60px;
   font-weight: 100;
   text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;
   background-color: rgba(0, 0, 0, 0.5);
-  // width: 100%;
-  // position: absolute;
-  // left: 0;
+  width: 100%;
+  left: 0;
+}
+
+.thumbnail {
+  position: relative;
+  margin: auto;
+  // height: auto;
 }
