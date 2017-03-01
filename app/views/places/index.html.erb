@@ -9,7 +9,7 @@
       <div class="thumbnail">
         <%= image_tag 'slider1.jpg', class: 'img-fluid' %>
         <div class="carousel-caption d-none d-sm-block">
-          Fine South Asian Cuisine
+          The finest South Asian cuisine
         </div>
       </div>
     </div>
@@ -17,7 +17,7 @@
       <div class="thumbnail">
         <%= image_tag 'slider2.jpg', class: 'img-fluid' %>
         <div class="carousel-caption d-none d-sm-block">
-          Craving Tandoori?
+          Tandoori craving?
         </div>
       </div>
     </div>
@@ -25,7 +25,7 @@
       <div class="thumbnail">
         <%= image_tag 'slider3.jpg', class: 'img-fluid' %>
         <div class="carousel-caption d-none d-sm-block">
-          Best when enjoyed with friends :)
+          Tonight, eat like a god.
         </div>
       </div>
     </div>
@@ -52,18 +52,18 @@
     <br />
     <p><%= place.description %></p>
 
-  <% if place.photos.present? %>
-    <div class="row">
-      <% place.photos.each do |photo| %>
-        <div class="col-sm-4">
-          <img src="<%= photo.picture %>" class="img-fluid" />
-          <% if photo.caption.present? %>
-            <figcaption class="figure-caption"><%= photo.caption %></figcaption>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+    <% if place.photos.present? %>
+      <div class="row">
+        <% place.photos.each do |photo| %>
+          <div class="col-sm-4">
+            <img src="<%= photo.picture %>" class="img-fluid" />
+            <% if photo.caption.present? %>
+              <figcaption class="figure-caption"><%= photo.caption %></figcaption>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
 
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
