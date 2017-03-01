@@ -1,3 +1,4 @@
+<br />
 <div class="booyah-box col-10 offset-1">
   <div class="row">
     <div class="col-md-4">
@@ -32,3 +33,50 @@
     </div>
   <% end %>
 </div>
+
+<div class="clear"></div>
+
+<br />
+
+<h2 class="text-center">My Places</h2>
+
+<br />
+
+<% @user.places.each do |place| %>
+  <div class="booyah-box col-10 offset-1">
+    <h1><%= link_to place.name, place_path(place) %></h1>
+    <i><%= place.address %></i>
+    <br />
+    <br />
+    <p><%= place.description %></p>
+
+  <% if place.photos.present? %>
+    <div class="row">
+      <% place.photos.each do |photo| %>
+        <div class="col-sm-4">
+          <img src="<%= photo.picture %>" class="img-fluid" />
+          <% if photo.caption.present? %>
+            <figcaption class="figure-caption"><%= photo.caption %></figcaption>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+    <% if place.user.present? %>
+      <small><%= place.user.email %></small>
+    <% end %>
+
+    <% if place.comments.present? %>
+      <div class="col-12">
+        <blockquote>
+          <% if place.comments.last.humanized_rating.present? %>
+            <b><%= place.comments.last.humanized_rating %></b> -
+          <% end %>
+          <%= place.comments.last.message %>
+          <small><%= place.comments.last.user.email %></small>
+        </blockquote>
+      </div>    
+    <% end %>
+  </div>
+<% end %>
