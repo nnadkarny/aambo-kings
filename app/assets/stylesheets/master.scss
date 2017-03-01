@@ -92,14 +92,14 @@ body {
 }
 
 blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
+  // background: #f9f9f9;
+  border-left: 10px solid #FFCC00;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
 blockquote:before {
-  color: #ccc;
+  color: #292b2c;
   content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
@@ -138,7 +138,7 @@ input {
 .carousel {
   // background-color: #4A4A4A;
   // width: 95%;
-  background: image_url('tweed_@2X.png');
+  background: image_url('mangoes-closeup-cropped.png');
   box-shadow: 0px 3px 8px #2a2a2a;
   margin: auto;
 }
@@ -150,7 +150,7 @@ input {
 }
 
 .carousel-caption {
-  font-size: 60px;
+  font-size: 30px;
   font-weight: 100;
   text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -163,4 +163,26 @@ input {
   margin: auto;
   // height: auto;
   box-shadow: 0px 4px 8px #2a2a2a;
+}
+
+.user-email {
+  font-size: 24px;
+  font-weight: 600;
+  color: #00B500;
+}
+
+@include media-breakpoint-up(sm) {
+  .carousel-caption {
+    font-size: 60px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .user-email {
+    font-size: 40px;
+  }
+}
+
+.hum-rating {
+  color: #00B500;
 }

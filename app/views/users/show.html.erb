@@ -6,9 +6,10 @@
     </div>
 
     <div class="col-md-8">
-      <h1><%= @user.email %></h1>
-      <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
-      <h4>Comments: <%= @user.comments.count %></h4>
+      <div class="user-email"><%= @user.email %></div>
+      <br/>
+      <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3><br/>
+      <h4>Comments: <%= @user.comments.count %></h4><br/>
       <h4>5 Star Reviews: <%= @user.comments.where(rating: '5_stars').count %></h4>
     </div>
   </div>
@@ -25,7 +26,7 @@
       <h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
       <blockquote>
         <% if comment.humanized_rating.present? %>
-          <b><%= comment.humanized_rating %></b> -
+          <b class="hum-rating"><%= comment.humanized_rating %></b> -
         <% end %>
         <%= comment.message %>
         <small><%= comment.user.email %></small>

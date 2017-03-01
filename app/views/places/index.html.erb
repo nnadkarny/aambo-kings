@@ -8,7 +8,8 @@
     <div class="carousel-item active">
       <div class="thumbnail">
         <%= image_tag 'slider1.jpg', class: 'img-fluid' %>
-        <div class="carousel-caption d-none d-sm-block">
+        <div class="carousel-caption">
+<!--         <div class="carousel-caption d-none d-sm-block"> -->
           The finest South Asian cuisine
         </div>
       </div>
@@ -16,7 +17,7 @@
     <div class="carousel-item">
       <div class="thumbnail">
         <%= image_tag 'slider2.jpg', class: 'img-fluid' %>
-        <div class="carousel-caption d-none d-sm-block">
+        <div class="carousel-caption">
           Tandoori craving?
         </div>
       </div>
@@ -24,7 +25,7 @@
     <div class="carousel-item">
       <div class="thumbnail">
         <%= image_tag 'slider3.jpg', class: 'img-fluid' %>
-        <div class="carousel-caption d-none d-sm-block">
+        <div class="carousel-caption">
           Tonight, eat like a god.
         </div>
       </div>
@@ -73,7 +74,7 @@
       <div class="col-12">
         <blockquote>
           <% if place.comments.last.humanized_rating.present? %>
-            <b><%= place.comments.last.humanized_rating %></b> -
+            <b class="hum-rating"><%= place.comments.last.humanized_rating %></b> -
           <% end %>
           <%= place.comments.last.message %>
           <small><%= place.comments.last.user.email %></small>
