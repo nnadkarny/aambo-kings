@@ -56,17 +56,20 @@
     <% if place.photos.present? %>
       <div class="row">
         <% place.photos.each do |photo| %>
-          <div class="col-sm-4">
-            <img src="<%= photo.picture %>" class="img-fluid" />
+          <div class="photo-box col-6 col-sm-4 col-lg-3">
+            <img src="<%= photo.picture %>" class="place-photo img-fluid" alt="<%= place.name%>" />
             <% if photo.caption.present? %>
-              <figcaption class="figure-caption"><%= photo.caption %></figcaption>
+              <div class="photo-cap scroll-box">
+                <p class="figure-caption"><%= photo.caption %></p>
+              </div>
             <% end %>
           </div>
         <% end %>
       </div>
-    <% end %>
+    <% end %> 
 
     <% if place.user.present? %>
+      <br />
       <small><%= place.user.email %></small>
     <% end %>
 
